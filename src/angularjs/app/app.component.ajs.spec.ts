@@ -5,6 +5,19 @@ import {AppModule} from "../../angular/app/app.module";
 
 describe('#app.component.ajs', function() {
     let $compile, $rootScope, scope, element;
+    beforeEach(() => {
+        const directiveStubs = [
+            'userDirective'
+        ];
+
+        ng.mock.module(angularjsAppModuleTests, function($provide) {
+            directiveStubs.forEach(stub => {
+                $provide.factory(stub, () => {
+                    return {};
+                });
+            });
+        });
+    });
 
     beforeEach(ng.mock.module(createAngularJSTestingModule([AppModule])));
     beforeEach(ng.mock.module(angularjsAppModuleTests));

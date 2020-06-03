@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {UserService} from "..";
+import {UserComponent} from "../user/user.component";
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, UserComponent ],
   providers:    [  ],
-  entryComponents: [AppComponent]
+  entryComponents: [AppComponent, UserComponent]
 })
 export class AppModule {
   constructor() {}

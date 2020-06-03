@@ -3,8 +3,6 @@ import * as angular from 'angular';
 
 import { angularjsAppModule } from './angularjs/app/app.module.ajs';
 
-console.log('SLDKFJSDLKJF:SDLKFJ');
-
 angular
   .bootstrap(
     document.getElementById(angularjsAppModule),

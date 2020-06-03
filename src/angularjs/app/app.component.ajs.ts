@@ -8,6 +8,7 @@ export const ajsAppComponent = ['ajsApp', {
         The user {{ $ctrl.user.username }} ({{ $ctrl.user.twitter }}) was retrieved using
         a <code>UserService</code> from Angular part of the application.
       </p>
+      <user></user>
       <p>Epic!</p>
     </div>
   `,

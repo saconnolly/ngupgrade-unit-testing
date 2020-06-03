@@ -6,6 +6,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { AppComponent } from './app/app.component';
 import { UserService } from './user/user.service';
+import {UserComponent} from "./user/user.component";
 
 const bootstrapAppModule = (extraProviders: StaticProvider[]) => {
   const platformRef = platformBrowserDynamic(extraProviders);
@@ -30,8 +31,10 @@ export * from './user/user.service';
 
 export const downgradedAngularAppModule = angular.module('downgraded-angular-module', [downgradedAngularModule])
       .factory('userService', downgradeInjectable(UserService))
-      .directive('app', downgradeComponent({ component: AppComponent }));
+      .directive('app', downgradeComponent({ component: AppComponent }))
+      .directive('user', downgradeComponent({ component: UserComponent }));
 
 export const downgradedAngularAppModuleTests = angular.module('downgraded-angular-module-tests', [])
     .factory('userService', downgradeInjectable(UserService))
-    .directive('app', downgradeComponent({ component: AppComponent }));
+    .directive('app', downgradeComponent({ component: AppComponent }))
+    .directive('user', downgradeComponent({ component: UserComponent }));

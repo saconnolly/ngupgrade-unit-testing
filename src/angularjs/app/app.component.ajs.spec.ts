@@ -36,6 +36,10 @@ describe('#app.component.ajs', function() {
     }));
 
     it('should create component without errors', () => {
-       expect(element).toBeTruthy();
+        expect(element).toBeTruthy();
+    });
+
+    it('should create component with a span tag', () => {
+        expect(element.html()).toContain('span');
     });
 });

@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {UserService} from "..";
 import {UserComponent} from "../user/user.component";
+import {UpgradeModule} from "@angular/upgrade/static";
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ BrowserModule, UpgradeModule ],
   declarations: [ AppComponent, UserComponent ],
   providers:    [  ],
   entryComponents: [AppComponent, UserComponent]
